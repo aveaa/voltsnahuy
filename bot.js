@@ -33,4 +33,13 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }
+if(['setting', 'settings'].includes(command)) {
+      let e = args.shift()
+  if(!e) return message.reply('You will setting reports? Type ``##setting reports``')
+  if(e == 'reports') {
+    const embed = new Discord.RichEmbed()
+      .setTitle('Sorry, but you cant setting reports now. Default reports channel is #reports')
+      .setColor(color)
+    message.channel.send({embed})
+}
 })});
