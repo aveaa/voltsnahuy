@@ -52,7 +52,7 @@ if(message.content.startsWith(p + `help`)) {
                 message.react("✅")
             }).catch(function() {});
 }
-    if({['hug'].includes(command)) {
+    if(['hug'].includes(command)) {
     const u = message.mentions.users.first()
     const page = await r.get('https://nekos.life/api/v2/img/hug')
     const embed = new .RichEmbed()
