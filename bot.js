@@ -54,7 +54,7 @@ if(message.content.startsWith(p + `help`)) {
 }
     if(['hug', 'обнимахи'].includes(command)) {
           const u = msg.mentions.users.first()
-            const page = await r.get('https://nekos.life/api/v2/img/hug')
+            const page = r.get('https://nekos.life/api/v2/img/hug')
             const embed = new Discord.RichEmbed()
             .setTitle(message.author + ' kissed ' + u.tag)
             .setImage(page.body.url)
