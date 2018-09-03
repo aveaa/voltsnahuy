@@ -52,4 +52,7 @@ if(message.content.startsWith(p + `help`)) {
                 message.react("✅")
             }).catch(function() {});
 }
+    if(['hug', 'обнимахи'].includes(command)) {
+            const page = await r.get('https://nekos.life/api/v2/img/hug')
+}
 })});
