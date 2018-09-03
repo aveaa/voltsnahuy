@@ -1,10 +1,10 @@
-let Discord = require(`discord.js`)
-let bot = new Discord.Client();
+var Discord = require(`discord.js`)
+var bot = new Discord.Client();
 bot.login(process.env.TOKEN)
 //Let
-let p ='##';
-let color = '#615172';
-let bot_name = "Volts";
+var p ='##';
+var color = '#615172';
+var bot_name = "Volts";
 //end Let
 //Log
 bot.on('ready', () => {
