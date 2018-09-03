@@ -19,6 +19,11 @@ if(message.content.startsWith(p + `help`)) {
         .setFooter(bot_name) 
         .setTimestamp();
     message.channel.send({embed});
+ 
+if(message.content.startsWith(p + 'presence')( {
+    const embed = new Discord.RichEmbed()
+        .setTitle("test ebat")
+     message.channel.send({embed})
 }
 });
 
