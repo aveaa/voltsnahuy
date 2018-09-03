@@ -56,7 +56,7 @@ if(message.content.startsWith(p + `help`)) {
     const u = message.mentions.users.first()
     const page = r.get('https://nekos.life/api/v2/img/hug')
     const embed = new Discord.RichEmbed()
-      .setTitle(`${msg.author.tag} обнял ${u.tag}`)
+      .setTitle(`${message.author.tag} обнял ${u.tag}`)
       .setImage(page.body.url)
       .setColor('FFFFFF')
 }
