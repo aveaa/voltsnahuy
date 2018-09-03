@@ -16,10 +16,12 @@ bot.on('ready', () => {
     console.log(`Название бота ${bot.user.username}`)
     console.log(`Айди бота: ${bot.user.id}`)
     console.log("<----------------->");
+};
 //end Log
 bot.on('message', message => {
     let args = message.content.slice(p.length).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
+}
   
  if (['eval', 'евал'].includes(command) && ['406343162651738112', '341988428457705482'].includes(msg.author.id)) {
     var code = args.join(' ');
@@ -41,5 +43,4 @@ bot.on('message', message => {
         .setColor('0xff0202')
         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
       msg.channel.send({embed});
-}
-});
+};
