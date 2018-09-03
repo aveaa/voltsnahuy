@@ -52,12 +52,11 @@ if(message.content.startsWith(p + `help`)) {
                 message.react("✅")
             }).catch(function() {});
 }
-    if(['hug', 'обнимахи'].includes(command)) {
-          const u = msg.mentions.users.first()
-            const page = r.get('https://nekos.life/api/v2/img/hug')
-            const embed = new Discord.RichEmbed()
-            .setTitle(message.author + ' kissed ' + u.tag)
-            .setImage(page.body.url)
-            message.channel.send({embed})
+    if({['hug'].includes(command)) {
+    const page = await r.get('https://nekos.life/api/v2/img/hug')
+    const embed = new .RichEmbed()
+      .setTitle(`${msg.author.tag} обнял ${u.tag}`)
+      .setImage(page.body.url)
+      .setColor('FFFFFF')
 }
 })});
