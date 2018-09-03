@@ -32,4 +32,25 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }
+        if(['mutemute','mut'].includes(command)) {
+      if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("**You dont have needed permission**");
+      let muted = message.mentions.members.first();
+      if(!muted) return message.reply("**Please, enter the user**");
+      const mutedRole = message.member.guild.roles.find('name', "MutedRole") || message.member.guild.roles.find('name', "MutedRole");
+      if(!mutedRole) return message.reply("I dont see role with name "MutedRole"");
+            muted.addRole(mutedRole)
+            args.shift();
+            args.shift();
+            const embed = new Discord.RichEmbed()
+            .setTitle("MuteInfo")
+            .setColor(color )
+            .setDescription(`**User ${muted} has been muted**`)
+            .setFooter(bot_name)
+            .setTimestamp();
+            message.channel.send({
+                embed
+            }).then(function(message) {
+                message.react("✅")
+            }).catch(function() {});
+}
 })});
