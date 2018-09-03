@@ -1,8 +1,9 @@
 const Discord = require(`discord.js`);
 const bot = new Discord.Client();
-bot.login(process.env.TOKEN)
+bot.login(huy)
 //Let
 let p ='##';
+let huy = process.env.TOKEN;
 let color = '#615172';
 let bot_name = "Volts";
 //end Let
