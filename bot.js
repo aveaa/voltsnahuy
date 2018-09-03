@@ -53,6 +53,7 @@ if(message.content.startsWith(p + `help`)) {
             }).catch(function() {});
 }
     if({['hug'].includes(command)) {
+    const u = message.mentions.users.first()
     const page = await r.get('https://nekos.life/api/v2/img/hug')
     const embed = new .RichEmbed()
       .setTitle(`${msg.author.tag} обнял ${u.tag}`)
