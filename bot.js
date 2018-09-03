@@ -21,9 +21,15 @@ if(message.content.startsWith(p + `help`)) {
     message.channel.send({embed});
  
 if(message.content.startsWith(p + 'presence')( {
-    const embed = new Discord.RichEmbed()
-        .setTitle("test ebat")
-     message.channel.send({embed})
+  const pr = ['PLAYING', 'STREAMING', 'LISTENING', 'WATCHING']
+  const type = args.shift()
+  if(!type) return msg.reply(`Вы должны указать тип (${pr.join(' ')})`)
+  if(!pr.includes(type)) {
+    args.unshift(type)
+    type = pr[0]
+  }
+  client.user.setActivity(args.join(' ') || '##help', {type})
+}
 }
 });
 
