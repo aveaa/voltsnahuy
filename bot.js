@@ -45,4 +45,4 @@ bot.on('message', message => {
         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
       msg.channel.send({embed});
 }
-});
+};
