@@ -60,4 +60,4 @@ if(message.content.startsWith(p + `help`)) {
         message.channel.send("suka");
 
 }
-});
+};
