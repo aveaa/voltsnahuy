@@ -52,12 +52,4 @@ if(message.content.startsWith(p + `help`)) {
                 message.react("✅")
             }).catch(function() {});
 }
-            
-        if(['suka, blet'].includes(command)) {
-            message.channel.send("suka");
-            ('messageReactionAdd', (reaction, user) => {
-    if(reaction.emoji.name === "✅") {
-        message.channel.send("suka");
-
-}
-
+})});
