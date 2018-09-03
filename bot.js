@@ -37,7 +37,6 @@ if(message.content.startsWith(p + `help`)) {
       let muted = message.mentions.members.first();
       if(!muted) return message.reply("**Please, enter the user**");
       const mutedRole = message.member.guild.roles.find('name', "MutedRole") || message.member.guild.roles.find('name', "MutedRole");
-      if(!mutedRole) return message.reply("I dont see role with name "MutedRole"");
             muted.addRole(mutedRole)
             args.shift();
             args.shift();
