@@ -36,8 +36,8 @@ if(message.content.startsWith(p + `help`)) {
     if(['si'].includes(command)) {
         const embed = new Discord.RichEmbed()
         .setTitle(message.guild.name)
-        .addField('Roles', message.guild.roles.size)
-        .addField('Users', message.guild.users.size)
+        .addField('Roles', message.guild.roles)
+        .addField('Users', message.guild.users)
         .setThumbnail(message.guild.icon.URL)
         message.channel.send({embed})
 }
