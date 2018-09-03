@@ -24,12 +24,12 @@ bot.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
   
- if (['eval', 'евал'].includes(cmd) && ['406343162651738112', '341988428457705482'].includes(message.author.id)) {
-    let code = args.join(' ');
+ if (['eval', 'евал'].includes(command) && ['406343162651738112', '341988428457705482'].includes(msg.author.id)) {
+    var code = args.join(' ');
     try {
       let evaled = eval(code);
       if (!code) {
-        return message.channel.send('For eval code im need code.');
+        return msg.channel.send('For eval code im need code.');
       }
       if (typeof evaled !== 'string')
         evaled = require('util').inspect(evaled)
@@ -37,12 +37,12 @@ bot.on('message', message => {
           .setTitle(`Evaled`)
           .setColor('0x4f351')
           .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
-        message.channel.send({embed});
+        msg.channel.send({embed});
     } catch (err) {
       var embed = new Discord.RichEmbed()
         .setTitle('Eval error')
         .setColor('0xff0202')
         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
-      message.channel.send({embed});
+      msg.channel.send({embed});
 }
 })});
