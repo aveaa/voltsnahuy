@@ -8,9 +8,6 @@ var bot_name = "Volts";
 //end Let
 //Log
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: `##help`, type: 0 } }.catch();
-});
-bot.on('ready', () => {
     console.log("<---->Я готов<---->")
     console.log(`Я на ${bot.guilds.size} серверах`)
     console.log(`Каналов/категорий ${bot.channels.size}`)
