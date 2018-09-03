@@ -1,6 +1,6 @@
 const Discord = require(`discord.js`);
 const bot = new Discord.Client();
-bot.login("NDg2MTY2ODMyNDM3Mzk1NDU2.Dm7SOA.WMsety5PEhEJBwMsAtXoJpsV2Ds")
+bot.login(process.env.TOKEN)
 //Let
 let p ='##';
 let color = '#615172';
@@ -23,13 +23,26 @@ bot.on('ready', () => {
 bot.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-if(message.content.startsWith(p + `help`)) {
-    const embed = new Discord.RichEmbed()
-        .setTitle("Help you")
-        .setColor(color)
-        .setDescription('**Bot prefix - ' + p + '**')
-        .setFooter(bot_name) 
-        .setTimestamp();
-    message.channel.send({embed});
+  
+ if (['eval', 'евал'].includes(command) && ['406343162651738112', '341988428457705482'].includes(msg.author.id)) {
+    let code = args.join(' ');
+    try {
+      let evaled = eval(code);
+      if (!code) {
+        return message.channel.send('For eval code im need code.');
+      }
+      if (typeof evaled !== 'string')
+        evaled = require('util').inspect(evaled)
+        const embed = new Discord.RichEmbed()
+          .setTitle(`Evaled`)
+          .setColor('0x4f351')
+          .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
+        message.channel.send({embed});
+    } catch (err) {
+      const embed = new Discord.RichEmbed()
+        .setTitle('Eval error')
+        .setColor('0xff0202')
+        .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
+      message.channel.send({embed});
 }
-})});
+});
