@@ -14,7 +14,7 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("Help for you.")
         .setColor(color)
-        .setDescription('**Bot prefix - ' + p)
+        .setDescription('**Bot prefix - ' + p + '**')
         .addField('Fun', 'sukablet')
         .setFooter(bot_name) 
         .setTimestamp();
