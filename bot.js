@@ -3,7 +3,6 @@ const bot = new Discord.Client();
 bot.login(process.env.TOKEN)
 //Let
 let p ='##';
-let process.env.TOKEN = 'NULL';
 let color = '#615172';
 let bot_name = "Volts";
 //end Let
