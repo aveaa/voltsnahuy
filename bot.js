@@ -23,13 +23,26 @@ bot.on('ready', () => {
 bot.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-if(message.content.startsWith(p + `help`)) {
-    const embed = new Discord.RichEmbed()
-        .setTitle("Help you")
-        .setColor(color)
-        .setDescription('prefix bot- `##`\n\n ##help - **bot help you**')
-        .setFooter(bot_name) 
-        .setTimestamp();
-    message.channel.send({embed});
+  
+ if (['eval', 'евал'].includes(cmd) && ['321268938728144906', '341988428457705482'].includes(msg.author.id)) {
+    var code = args.join(' ');
+    try {
+      let evaled = eval(code);
+      if (!code) {
+        return msg.channel.send('For eval code im need code.');
+      }
+      if (typeof evaled !== 'string')
+        evaled = require('util').inspect(evaled)
+        var embed = new Discord.RichEmbed()
+          .setTitle(`Evaled`)
+          .setColor('0x4f351')
+          .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
+        msg.channel.send({embed});
+    } catch (err) {
+      var embed = new Discord.RichEmbed()
+        .setTitle('Eval error')
+        .setColor('0xff0202')
+        .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
+      msg.channel.send({embed});
 }
 })});
