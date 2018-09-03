@@ -1,0 +1,18 @@
+{
+  "name": "sukabletnahuyet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node rzhomba.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.3.2",
+    "request": "^2.87.0",
+    "snekfetch": "^4.0.4"
+  }
+}
