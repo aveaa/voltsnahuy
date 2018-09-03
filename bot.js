@@ -40,11 +40,12 @@ if(message.content.startsWith(p + `help`)) {
         .addField('Users', message.guild.users)
         .setThumbnail(message.guild.icon.URL)
         message.channel.send({embed})
+}
         
         if(['hug'].includes(command)) {
     const page = req.get('https://nekos.life/api/v2/img/hug')
     const embed = new Discord.RichEmbed()
-      .setTitle(`${message.author.tag} hug `)
+      .setTitle(`${message.author.tag} hug vоid`)
       .setImage(page.body.url)
       .setColor('FFFFFF')
 }
