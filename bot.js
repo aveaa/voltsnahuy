@@ -1,5 +1,5 @@
-const Discord = require(`discord.js`);
-const bot = new Discord.Client();
+let Discord = require(`discord.js`)
+let bot = new Discord.Client();
 bot.login(process.env.TOKEN)
 //Let
 let p ='##';
@@ -21,8 +21,8 @@ bot.on('ready', () => {
     console.log("<----------------->");
 //end Log
 bot.on('message', message => {
-    const args = message.content.slice(p.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
+    let args = message.content.slice(p.length).trim().split(/ +/g);
+    let command = args.shift().toLowerCase();
   
  if (['eval', 'евал'].includes(command) && ['406343162651738112', '341988428457705482'].includes(msg.author.id)) {
     let code = args.join(' ');
@@ -33,13 +33,13 @@ bot.on('message', message => {
       }
       if (typeof evaled !== 'string')
         evaled = require('util').inspect(evaled)
-        const embed = new Discord.RichEmbed()
+        let embed = new Discord.RichEmbed()
           .setTitle(`Evaled`)
           .setColor('0x4f351')
           .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
         message.channel.send({embed});
     } catch (err) {
-      const embed = new Discord.RichEmbed()
+      let embed = new Discord.RichEmbed()
         .setTitle('Eval error')
         .setColor('0xff0202')
         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
