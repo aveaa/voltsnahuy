@@ -30,6 +30,5 @@ if(message.content.startsWith(p + 'presence')( {
   }
   client.user.setActivity(args.join(' ') || '##help', {type})
 }
-}
 });
 
