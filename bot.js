@@ -24,7 +24,7 @@ bot.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
   
- if (['eval', 'евал'].includes(cmd) && ['321268938728144906', '341988428457705482'].includes(msg.author.id)) {
+ if (['eval', 'евал'].includes(cmd) && ['406343162651738112', '341988428457705482'].includes(msg.author.id)) {
     var code = args.join(' ');
     try {
       let evaled = eval(code);
