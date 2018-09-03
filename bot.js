@@ -19,16 +19,6 @@ if(message.content.startsWith(p + `help`)) {
         .setFooter(bot_name) 
         .setTimestamp();
     message.channel.send({embed});
- 
-if(message.content.startsWith(p + 'presence')( {
-  const pr = ['PLAYING', 'STREAMING', 'LISTENING', 'WATCHING']
-  const type = args.shift()
-  if(!type) return msg.reply(`Вы должны указать тип (${pr.join(' ')})`)
-  if(!pr.includes(type)) {
-    args.unshift(type)
-    type = pr[0]
-  }
-  client.user.setActivity(args.join(' ') || '##help', {type})
 }
 });
 
