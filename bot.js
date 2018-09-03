@@ -33,12 +33,12 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }
-    if(['hug'].includes(command)) {
-    const u = message.mentions.users.first()
-    const page = req.get('https://nekos.life/api/v2/img/hug')
-    const embed = new Discord.RichEmbed()
-      .setTitle(`${message.author.tag} обнял ${u.tag}`)
-      .setImage(page.body.url)
-      .setColor('FFFFFF')
+    if(['si'].includes(command)) {
+        const embed = new Discord.RichEmbed()
+        .setTitle(guild.name)
+        .addField('Roles', message.guild.roles.size)
+        .addField('Users', message.guild.users.size)
+        .setThumbnail(message.guild.icon.URL)
+        message.channel.send({embed})
 }
 })});
