@@ -1,4 +1,5 @@
 const Discord = require(`discord.js`);
+const req = require('snekfetch')
 const bot = new Discord.Client();
 bot.login(process.env.TOKEN)
 //Let
@@ -54,7 +55,7 @@ if(message.content.startsWith(p + `help`)) {
 }
     if(['hug'].includes(command)) {
     const u = message.mentions.users.first()
-    const page = r.get('https://nekos.life/api/v2/img/hug')
+    const page = req.get('https://nekos.life/api/v2/img/hug')
     const embed = new Discord.RichEmbed()
       .setTitle(`${message.author.tag} обнял ${u.tag}`)
       .setImage(page.body.url)
