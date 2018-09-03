@@ -28,20 +28,11 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("Help you")
         .setColor(color)
-        .setDescription('**Bot prefix - ' + p + '**')
+        .setDescription('**Bot prefix - ' + p + '**' + '\n\n ##help - All commands\n##hug - hug other user')
         .setFooter(bot_name) 
         .setTimestamp();
     message.channel.send({embed});
 }
-    if(['si'].includes(command)) {
-        const embed = new Discord.RichEmbed()
-        .setTitle(message.guild.name)
-        .addField('Roles', message.guild.roles)
-        .addField('Users', message.guild.users)
-        .setThumbnail(message.guild.icon.URL)
-        message.channel.send({embed})
-}
-        
         if(['hug'].includes(command)) {
     const page = req.get('https://nekos.life/api/v2/img/hug')
     const embed = new Discord.RichEmbed()
