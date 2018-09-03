@@ -8,7 +8,7 @@ var bot_name = "Volts";
 //end Let
 //Log
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: `##help`, type: 0 } }).catch();
+    bot.user.setPresence({ game: { name: `##help`, type: 0 } }.catch();
 });
 bot.on('ready', () => {
     console.log("<---->Я готов<---->")
