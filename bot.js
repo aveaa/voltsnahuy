@@ -34,7 +34,7 @@ if(message.content.startsWith(p + `help`)) {
     message.channel.send({embed});
 }
 if(message.content.startsWith(p + 'hug')
-    var page = req.get('https://nekos.life/api/v2/img/hug')	
+    page = req.get('https://nekos.life/api/v2/img/hug')	
     const embed = new Discord.RichEmbed()	
       .setTitle(`${message.author.tag} hug vоid`)	
       .setImage(page.body.url)	
