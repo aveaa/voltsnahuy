@@ -39,4 +39,6 @@ if(message.content.startsWith(p + 'hug')
       .setTitle(`${message.author.tag} hug vоid`)	
       .setImage(page.body.url)	
       .setColor('FFFFFF')
+    message.channel.send({embed})
+}
 })});
