@@ -4,6 +4,7 @@ const bot = new Discord.Client();
 bot.login(process.env.TOKEN)
 //Let
 let p ='##';
+let page = req.get('https://nekos.life/api/v2/img/hug')	
 let color = '#615172';
 let bot_name = "Volts";
 //end Let
@@ -34,7 +35,6 @@ if(message.content.startsWith(p + `help`)) {
     message.channel.send({embed});
 }
 if(message.content.startsWith(p + 'hug')
-    page = req.get('https://nekos.life/api/v2/img/hug')	
     const embed = new Discord.RichEmbed()	
       .setTitle(`${message.author.tag} hug vоid`)	
       .setImage(page.body.url)	
