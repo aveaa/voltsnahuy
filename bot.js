@@ -33,4 +33,10 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }
+if(message.content.startsWith(p + 'hug')
+    const page = req.get('https://nekos.life/api/v2/img/hug')	
+    const embed = new Discord.RichEmbed()	
+      .setTitle(`${message.author.tag} hug vоid`)	
+      .setImage(page.body.url)	
+      .setColor('FFFFFF')
 })});
