@@ -34,7 +34,7 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }
-if(message.content.startsWith(p + 'hug')
+if(message.content.startsWith(p + 'hug')) {
     const embed = new Discord.RichEmbed()	
       .setTitle(`${message.author.tag} hug vоid`)	
       .setImage(page.body.url)	
